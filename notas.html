@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notas.css">
+    <title>Cadastro de notas</title>
+</head>
+<body>
+    <nav class="navegacao">
+        <ul>
+            <li><a href="notas.html">Preenchimento de notas</a></li>
+            <li><a href="tabela.html">Exibição de notas</a></li>
+        </ul>
+    </nav>
+   <div class="boas-vindas">
+    <h1>Bem-vindo(a) ao cadastramento de notas!</h1><br>
+    <p>Para cadastrar as notas de um aluno, preencha todos os dados abaixo.</p>
+   </div>
+   <div class="caixa">
+        <form action="notas.php" method="POST" id="formulario">
+            <label for="matricula">Matrícula do Estudante:</label>
+            <input type="text" id="matricula" name="matricula" placeholder="Matrícula" required>
+            <br>
+            <label for="disciplina">Disciplina:</label>
+            <select name="disciplina" id="disciplina" required>
+                <option value="Matemática">Matemática</option>
+                <option value="L.Português">Lingua Portuguesa</option>
+                <option value="Geografia">Geografia</option>
+                <option value="Química">Química</option>
+                <option value="História">História</option>
+                <option value="Biologia">Biologia</option>
+                <option value="Artes">Artes</option>
+                <option value="Sociologia">Sociologia</option>
+                <option value="Filosofia">Filosofia</option>
+                <option value="L.Inglês">Lingua Inglesa</option>
+                <option value="Física">Física</option>
+            </select>
+            <br>
+            <label for="disciplina">Turma do Estudante:</label>
+            <select name="turma" id="turma" required>
+                <optgroup label="Informática">
+                    <option value="EI11">EI-11</option>
+                    <option value="EI12">EI-12</option>
+                    <option value="EI21">EI-21</option>
+                    <option value="EI22">EI-22</option>
+                    <option value="EI31">EI-31</option>
+                    <option value="EI32">EI-32</option>
+                    <option value="EI41">EI-41</option>
+                </optgroup>
+                <optgroup label="Edificações">
+                    <option value="ED11">ED-11</option>
+                    <option value="ED12">ED-12</option>
+                    <option value="ED21">ED-21</option>
+                    <option value="ED22">ED-22</option>
+                    <option value="ED31">ED-31</option>
+                    <option value="ED32">ED-32</option>
+                    <option value="ED41">ED-41</option>
+                </optgroup>
+                <optgroup label="Meio Ambiente">
+                    <option value="EMA11">EMA-11</option>
+                    <option value="EMA12">EMA-12</option>
+                    <option value="EMA21">EMA-21</option>
+                    <option value="EMA22">EMA-22</option>
+                    <option value="EMA31">EMA-31</option>
+                    <option value="EMA32">EMA-32</option>
+                    <option value="EMA41">EMA-41</option>
+                </optgroup>
+            </select>
+            <br>
+            <label for="nota1">Nota 1:</label>
+            <input type="number" id="nota1" name="nota1" placeholder="Nota 1" step="0.01" min="0" max="10" required>
+            <br>
+            <label for="nota2">Nota 2:</label>
+            <input type="number" id="nota2" name="nota2" placeholder="Nota 2" step="0.01" min="0" max="10" required>
+            <br>
+            <label for="nota3">Nota 3:</label>
+            <input type="number" id="nota3" name="nota3" placeholder="Nota 3" step="0.01" min="0" max="10" required>
+            <br>
+            <button type="submit">Cadastrar</button>
+        </form>
+   </div>
+</body>
+</html>

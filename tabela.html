@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tabela.css">
+    <title>Cadastro de notas</title>
+</head>
+<body>
+    <div class="navegacao">
+        <nav>
+            <ul>
+                <li><a href="notas.html">Preenchimento de notas</a></li>
+                <li><a href="tabela.html">Exibição de notas</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p class="mensagem">Deseja visualizar a relação de notas de algumas matérias e turmas?</p>
+    <div class="caixa">
+        <form method="post" action="tabela.php">
+            Selecione uma disciplina:
+            <select name="disciplina" id="Disciplina">
+                <option value="Matemática">Matemática</option>
+                <option value="L.Português">Lingua Portuguesa</option>
+                <option value="Geografia">Geografia</option>
+                <option value="Química">Química</option>
+                <option value="História">História</option>
+                <option value="Biologia">Biologia</option>
+                <option value="Artes">Artes</option>
+                <option value="Sociologia">Sociologia</option>
+                <option value="Filosofia">Filosofia</option>
+                <option value="L.Inglês">Lingua Inglesa</option>
+                <option value="Física">Física</option>
+            </select> <br>
+            Selecione uma turma:
+            <select name="turma" id="turma">
+                <optgroup label="Informática">
+                    <option value="EI11">EI-11</option>
+                    <option value="EI12">EI-12</option>
+                    <option value="EI21">EI-21</option>
+                    <option value="EI22">EI-22</option>
+                    <option value="EI31">EI-31</option>
+                    <option value="EI32">EI-32</option>
+                    <option value="EI41">EI-41</option>
+                </optgroup>
+                <optgroup label="Edificações">
+                    <option value="ED11">ED-11</option>
+                    <option value="ED12">ED-12</option>
+                    <option value="ED21">ED-21</option>
+                    <option value="ED22">ED-22</option>
+                    <option value="ED31">ED-31</option>
+                    <option value="ED32">ED-32</option>
+                    <option value="ED41">ED-41</option>
+                </optgroup>
+                <optgroup label="Meio Ambiente">
+                    <option value="EMA11">EMA-11</option>
+                    <option value="EMA12">EMA-12</option>
+                    <option value="EMA21">EMA-21</option>
+                    <option value="EMA22">EMA-22</option>
+                    <option value="EMA31">EMA-31</option>
+                    <option value="EMA32">EMA-32</option>
+                    <option value="EMA41">EMA-41</option>
+                </optgroup>
+            </select><br>
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+</body>
+</html>

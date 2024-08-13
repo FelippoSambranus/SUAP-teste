@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="caixa">
+        <h1>Bem-vindo!</h1>
+        <div class="formulario">
+            <h2>Login</h2>
+            <form action="index.php" method="post">
+                <input type="text" placeholder="Usuário" id="user" required>
+                <input type="password" placeholder="Senha" id="senha" required>
+                <button type="submit" onclick="verificar()">Entrar</button>
+            </form>
+        </div>
+    </div> <br>
+    <div class="mensagem" id="mensagem"></div>
+    <script>
+        function verificar() {
+            let usuario = document.getElementById('user').value;
+            let pass = document.getElementById('senha').value;
+
+            if (usuario == '' || pass == '') {
+                document.getElementById('mensagem').innerHTML = '<p>Usuário ou senha não preenchida. Por favor, preencha todos os campos!</p>'
+            }
+            else if (usuario != 'IFBACadastro' || pass != 'IFBA12345') {
+                document.getElementById('mensagem').innerHTML = '<p>Usuário ou senha incorretas, por favor tente entrar novamente!</p>';
+                event.preventDefault();
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

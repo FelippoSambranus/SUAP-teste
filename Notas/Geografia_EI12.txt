@@ -1,0 +1,8 @@
+<tr>
+            <td>20241340001</td>
+            <td>10</td>
+            <td>2</td>
+            <td>7.8</td>
+            <td>6.6</td>
+            <td>Aprovado</td>
+        </tr>
