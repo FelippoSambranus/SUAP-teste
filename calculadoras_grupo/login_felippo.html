@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css_calculadora/login_felippo.css">
+    <title>Calculadora do Feleppu</title>
+</head>
+<body>
+    <div class="texto">
+        <h2>Entre para ter acesso a calculadora</h2>
+    </div>
+    <div class="formulario">
+        <form action="login_felippo.php" method="post">
+            <p>Digite um Usuário:</p>
+            <input type="text" placeholder="Usuário" id="user" required><br>
+            <p>Digite uma senha:</p>
+            <input type="text" placeholder="Senha" id="senha" required><br>
+            <button type="submit" onclick="entrar()">Entrar</button>
+        </form>
+    </div>
+    <script>
+        function entrar() {
+            let usuario = document.getElementById('user').value;
+            let pass = document.getElementById('senha').value;
+
+            if (usuario != 'Feleppu' || pass != 'FELEPPU12345') {
+                document.getElementById('mensagem').innerHTML = '<p>Usuário ou senha incorretas, por favor tente entrar novamente!</p>';
+                event.preventDefault();
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

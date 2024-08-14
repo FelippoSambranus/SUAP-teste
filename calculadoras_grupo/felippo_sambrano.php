@@ -14,13 +14,14 @@ if ($delta < 0) {
 
     $x1 = ((-$vB) + sqrt($delta))/(2*$vA);
     $x2 = ((-$vB) + sqrt($delta))/(2*$vA);
-    $arquivo = fopen("calculadora/felippo_sambrano.txt", "a");
+    $arquivo = fopen("./resultados/felippo_sambrano.txt", "a");
     $resultado = "
     Resultado: x1 = {$x1}, x2 = {$x2}
     ";
     fwrite($arquivo, $resultado);
     fclose($arquivo);
 
-    echo "<p>Resultados salvos! x1 = {$x1} e x2 = {$x2}.</p>";
+    echo "<p>Resultados salvos! x1 = {$x1} e x2 = {$x2}.</p><br>";
+    echo '<a href="felippo_sambrano.html">Voltar para a calculadora</a>';
 }
 ?>
